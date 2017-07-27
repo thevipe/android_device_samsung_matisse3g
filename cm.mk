@@ -1,6 +1,4 @@
-#!/bin/bash
-#
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +11,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-set -e
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-export DEVICE=matisse3g
-export DEVICE_COMMON=matisse-common
-export VENDOR=samsung
+# Inherit device configuration
+$(call inherit-product, device/samsung/matisse3g/full_matisse3g.mk)
 
-./../$DEVICE_COMMON/extract-files.sh $@
+# Release name
+PRODUCT_RELEASE_NAME := SM-T531
+PRODUCT_DEVICE := matisse3g
+PRODUCT_NAME := cm_matisse3g

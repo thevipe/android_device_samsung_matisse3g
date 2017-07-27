@@ -1,7 +1,4 @@
-# display
-ro.sf.lcd_density=160
-
-# radio
-ro.telephony.default_network=0
+# Radio
+ro.telephony.default_network=0,1
 telephony.lteOnGsmDevice=0
 ro.telephony.ril.config=simactivation

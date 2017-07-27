@@ -25,11 +25,4 @@
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
          format is UMTS|LTE|... -->
     <string translatable="false" name="config_radio_access_family">GSM|WCDMA</string>
-
-    <!-- This device is not "voice capable"; it's data-only. -->
-    <bool name="config_voice_capable">true</bool>
-
-    <!-- This device does not allow sms service. -->
-    <bool name="config_sms_capable">true</bool>
-    
 </resources>
